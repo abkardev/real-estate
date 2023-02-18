@@ -32,7 +32,7 @@ const Search = ({ properties }) => {
       </Flex>
       {searchFilters && <SearchFilters />}
       <Text fontSize='2xl' p='4' fontWeight='bold'>
-        Properties {router.query.purpose}
+        Properties {router.query.purpose === 'for-sale' ? 'For Sale' : 'For Rent'}
       </Text>
       <Flex flexWrap='wrap'>
         {properties.map((property) => <Property property={property} key={property.id} />)}
